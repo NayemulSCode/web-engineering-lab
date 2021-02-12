@@ -1,0 +1,30 @@
+nav {
+    height: 50px;
+    border: 1px solid #ddd;
+    background-color: #ddd
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li:hover a {
+    color: green;
+}
+
+footer {
+    height: 50px;
+    border: 1px solid #ddd;
+    background-color: #ddd
+}
+
+ul,
+ol {
+    color: #1ad64c;
+    font-size: 18px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Color</title>
+  </head>
+  <body>
+    <button id="changeGreen">Change Font Color Green</button>
+    <button id="changeRed">Change Font Color Red</button>
+    <p>
+      <span id="output">Click the Button -> Text color changes here...</span>
+    </p>
+    <script>
+      document.getElementById("changeGreen").onclick = function(){ document.getElementById("output").style.color = 'green';
+      }
+      document.getElementById("changeRed").onclick = function(){ document.getElementById("output").style.color = 'red';
+      }
+      function myGeeks() {
+      var x = document.getElementById("text");
+
+      if (x.innerHTML == "Welcome to Text Changes") { x.innerHTML = "Computer Science & Engineering";
+      } else {
+      x.innerHTML = "Welcome to MIST";
+      }
+      }
+      function myFunction() {
+      var btn = document.createElement("BUTTON"); document.body.appendChild(btn);
+      }
+      function myFunction2() {
+      var list = document.getElementById("myList"); list.removeChild(list.childNodes[0]);
+      }
+      
+    </script>
+    <h1 style="color: green">Text Changes</h1>
+
+    <label id="text"> Welcome to Text Changes </label>
+    <br />
+    <button onclick="myGeeks()">Click Here!</button>
+    <p>Click the button to make a BUTTON element.</p>
+    <button onclick="myFunction()">Insert Button tag</button>
+
+    <ul id="myList">
+      <li>NU</li>
+      <li>CSE</li>
+      <li>BBA</li>
+    </ul>
+    <button onclick="myFunction2()">Remove Button tag</button>
+  </body>
+</html>

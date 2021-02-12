@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Computer Science & Engineering</title>
+    <style>
+      nav {
+        height: 50px;
+        border: 1px solid #ddd;
+        background-color: #ddd;
+      }
+      nav ul li {
+        float: left;
+        list-style: none;
+      }
+      nav ul li a {
+        text-decoration: none;
+      }
+      nav ul li:hover a {
+        color: green;
+      }
+      .main {
+        min-height: 300px;
+      }
+      table {
+        text-align: center;
+        border-collapse: collapse;
+      }
+      table tr th{
+        border: 1px solid gray;
+      }
+      table tr td{
+        border: 1px solid gray;
+      }
+      footer {
+        height: 50px;
+        border: 1px solid #ddd;
+        text-align: center;
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="../html(Part-1)/Q2/index.html">Home</a></li>
+      </ul>
+    </nav>
+    <div class="main">
+      <center>
+        <div>
+          <h1>Mohammdpur Kendriya College</h1>
+        </div>
+        <span id="demo"></span>
+        <script>
+          document.getElementById("demo").innerHTML = "College Information";
+        </script>
+      </center>
+      <table style="width: 100%" cellspacing="2">
+        <tr>
+          <th></th>
+          <th>CSE</th>
+          <th>BBA</th>
+        </tr>
+        <tr>
+          <td>Teacher</td>
+          <td>4</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>Section</td>
+          <td>A</td>
+          <td>A and B</td>
+        </tr>
+        <tr>
+          <td>Student</td>
+          <td>200</td>
+          <td>400</td>
+        </tr>
+      </table>
+    </div>
+    <footer>
+      <p><strong>Footer</strong></p>
+    </footer>
+  </body>
+</html>

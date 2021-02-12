@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Js Validation</title>
+  </head>
+  <body>
+    <h3>Validation using JavaScript</h3>
+    <form name="MyForm" onsubmit="return(validate() && validateEmail());">
+      <table>
+        <tr>
+          <td>Name</td>
+          <td>:</td>
+          <td><input type="text" name="Name" /></td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>:</td>
+          <td>
+            <textarea name="Address"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>:</td>
+          <td><input type="text" name="Email" /></td>
+        </tr>
+        <tr>
+          <td>Mobile Number</td>
+          <td>:</td>
+          <td><input type="text" name="Mobile" /></td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>:</td>
+          <td>
+            <input type="radio" name="Gender" value="Male" /><span>Male</span>
+            <input type="radio" name="Gender" value="Female" /><span
+              >Female</span
+            >
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" /></td>
+          <td></td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      function validate() {
+        if (document.MyForm.Name.value == "") {
+          alert("Please provide your name!");
+          document.MyForm.Name.focus();
+          return false;
+        }
+        if (document.MyForm.Address.value == "") {
+          alert("Please provide your address!");
+          document.MyForm.Address.focus();
+          return false;
+        }
+        if (document.MyForm.Email.value == "") {
+          alert("Please provide your Email!");
+          document.MyForm.Email.focus();
+          return false;
+        }
+        if (
+          document.MyForm.Mobile.value == "" ||
+          isNaN(document.MyForm.Mobile.value) ||
+          document.MyForm.Mobile.value.length != 11
+        ) {
+          alert("Please provide your Mobile in ##### format!");
+          document.MyForm.Mobile.focus();
+          return false;
+        }
+        if (document.MyForm.Gender.value == 0) {
+          alert("Please provide Gender name!");
+          return false;
+        }
+        return true;
+      }
+      function validateEmail() {
+        var emailID = document.MyForm.Email.value;
+        var atpos = emailID.indexOf("@");
+        var dotpos = emailID.lastIndexOf(".");
+
+        if (atpos < 1 || dotpos - atpos < 2) {
+          alert("Please enter correct email Id");
+          document.MyForm.Email.focus();
+          return false;
+        }
+        alert("Form Succesfully Submitted");
+        window.location.reload();
+      }
+    </script>
+  </body>
+</html>
